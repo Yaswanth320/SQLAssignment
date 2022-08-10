@@ -52,11 +52,11 @@ Select ENAME As Employee_Name
 From EMP
 Where ENAME Like 'A%'
 
--- Q2. All Emoployees who Dont have a Manager? (Listing out the employees whose job isn't a manager)
+-- Q2. All Emoployees who Dont have a Manager? 
 
-Select ENAME As EMP_NOT_A_MANAGER
+Select ENAME As EMP_WHO_DONT_HAVE_A_MANAGER, JOB
 From EMP
-Where JOB != 'MANAGER'
+WHere mgrid is NULL
 
 -- Q3. List employee name, number and salary for those employees who earn in range 1200 to 1400?
 
