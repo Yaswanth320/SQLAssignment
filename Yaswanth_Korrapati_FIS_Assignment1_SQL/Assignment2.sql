@@ -73,19 +73,19 @@ Select ENAME, Sal
 From EMP
 where ENAME != 'JAMES'
 
--- Q4. Find out the details of employees whose names begin with ‘S’. 
+-- Q4. Find out the details of employees whose names begin with â€˜Sâ€™. 
 
 Select * 
 From EMP
 where ENAME like 'S%'
 
--- Q5. Find out the names of all employees that have ‘A’ anywhere in their name. 
+-- Q5. Find out the names of all employees that have â€˜Aâ€™ anywhere in their name. 
 
 Select ENAME
 From EMP
 where ENAME like '%A%'
 
--- Q6. Find out the names of all employees that have ‘L’ as their third character in their name. 
+-- Q6. Find out the names of all employees that have â€˜Lâ€™ as their third character in their name. 
 
 Select ENAME 
 From EMP
@@ -111,7 +111,7 @@ From EMP
 
 -- Q10. Select the name, job, salary, department number of all employees except SALESMAN from department number 30.
 
-Select ENAME, JOB, Sal 
+Select ENAME, JOB, Sal, DEPTNO 
 From EMP
 where JOB NOT LIKE 'SALESMAN' and DEPTNO = 30
 
