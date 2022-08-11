@@ -150,11 +150,11 @@ Where ENAME like '%L%L%' And (DEPTNO = 30 or mgrid = 7782)
 
 -- Q16. Display the names of employees with experience of over 10 years and under 20 yrs. Count the total number of employees. 
 
--- There are no employees who have exp between 10 and 20
+-- There are no employees who have exp between 10 and 20, Try with 36 or above at extreme to get an output. 
 
 Select ENAME as EMP_NAME, YEAR(GETDATE()) - YEAR(HIREDATE) AS EXPERIENCE_IN_YEARS
 From EMP
-Where ( YEAR(GETDATE()) - YEAR(HIREDATE)) between 10 and 20
+Where ( YEAR(GETDATE()) - YEAR(HIREDATE)) between 10 and 20 -- try 10 to 40.
 
 -- Q17. Retrieve the names of departments in ascending order and their employees in descending order. 
 
