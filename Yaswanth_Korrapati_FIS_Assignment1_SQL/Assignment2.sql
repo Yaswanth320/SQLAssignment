@@ -156,10 +156,13 @@ Select ENAME as EMP_NAME, YEAR(GETDATE()) - YEAR(HIREDATE) AS EXPERIENCE_IN_YEAR
 From EMP
 Where ( YEAR(GETDATE()) - YEAR(HIREDATE)) between 10 and 20 -- try 10 to 40.
 
--- Count the total number of employee
+-- Count the total number of employee with the experience between 10 to 20
 
-Select Count(*) As TOTAL_NO_OF_EMP
+Select Count(*) as NO_OF_EMP_WHITH_REQ_EXP
+From emp e1, (Select empno, YEAR(GETDATE()) - YEAR(HIREDATE) AS EXPERIENCE_IN_YEARS
 From EMP
+Where ( YEAR(GETDATE()) - YEAR(HIREDATE)) between 10 and 20) e2
+where e1.EMPNO = e2.EMPNO
 
 -- Q17. Retrieve the names of departments in ascending order and their employees in descending order. 
 
