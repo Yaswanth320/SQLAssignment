@@ -156,6 +156,11 @@ Select ENAME as EMP_NAME, YEAR(GETDATE()) - YEAR(HIREDATE) AS EXPERIENCE_IN_YEAR
 From EMP
 Where ( YEAR(GETDATE()) - YEAR(HIREDATE)) between 10 and 20 -- try 10 to 40.
 
+-- Count the total number of employee
+
+Select Count(*) As TOTAL_NO_OF_EMP
+From EMP
+
 -- Q17. Retrieve the names of departments in ascending order and their employees in descending order. 
 
 Select DEPT.DNAME as DEPT_NAME, EMP.ENAME as EMP_NAME
