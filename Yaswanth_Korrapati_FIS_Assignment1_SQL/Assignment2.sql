@@ -48,13 +48,13 @@ SELECT * FROM EMP
 
 -- Q1. Retrieve a list of MANAGERS.
 
---  with JOB as the manager reff
+--  with JOB as the manager 
 
 Select EMPNO, ENAME
 From EMP 
 Where JOB = 'MANAGER'
 
--- with mgrid as the job riff -- the result members act as a manager of atleast one person.
+-- the resultant members act as a manager of atleast one person. ( getting this data with mgrid column as reference)
 
 Select DISTINCT(E1.ENAME) as MANAGER_NAME
 FROM EMP E1 join EMP E2 
