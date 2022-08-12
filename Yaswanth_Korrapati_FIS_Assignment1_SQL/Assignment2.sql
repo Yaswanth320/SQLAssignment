@@ -164,6 +164,15 @@ From EMP
 Where ( YEAR(GETDATE()) - YEAR(HIREDATE)) between 10 and 20) e2
 where e1.EMPNO = e2.EMPNO
 
+-- using RollUP
+
+Select Coalesce(e1.Ename,'Total_no_of_emp') as EmployeeNO, Count(*) as EMPLOYEECOUNT
+From emp e1, (Select empno, YEAR(GETDATE()) - YEAR(HIREDATE) AS EXPERIENCE_IN_YEARS
+From EMP
+Where ( YEAR(GETDATE()) - YEAR(HIREDATE)) between 10 and 36) e2
+where e1.EMPNO = e2.EMPNO
+Group by Rollup(e1.Ename)
+
 -- Q17. Retrieve the names of departments in ascending order and their employees in descending order. 
 
 Select DEPT.DNAME as DEPT_NAME, EMP.ENAME as EMP_NAME
