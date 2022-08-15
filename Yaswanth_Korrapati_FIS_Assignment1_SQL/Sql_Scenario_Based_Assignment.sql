@@ -140,6 +140,8 @@ Values	(1, 'Ramesh', 32, 'Ahmedabad', 2000.00),
 
 Select * from Employee
 
+-- Query
+
 Select Lower(Name) as NAME, SALARY
 From Employee
 where SALARY is Null
