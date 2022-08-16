@@ -3,7 +3,7 @@ Use FISDB2
 
 -- Drop Database FISDB2
 
--- Drop Table Projects
+-- I have used Int and bigint in place of Number() with no of bytes in mind We can also use Numeric() but i thought int and bigint will be sufficient
 
 Create Table Clients
 (
